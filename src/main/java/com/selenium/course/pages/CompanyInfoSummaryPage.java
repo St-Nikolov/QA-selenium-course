@@ -13,8 +13,6 @@ public class CompanyInfoSummaryPage extends CompanyInfoPage{
     }
 
     private By.ByXPath forwardDividendAndYieldFieldLocator = new By.ByXPath("//td[@data-test='DIVIDEND_AND_YIELD-value']");
-//    @FindBy(xpath = "//td[@data-test='DIVIDEND_AND_YIELD-value']")
-//    private WebElement forwardDividendAndYieldField;
 
     public String getForwardDividendAndYieldValue(){
         explicitWaitUntilCondition(ExpectedConditions.presenceOfElementLocated(forwardDividendAndYieldFieldLocator));

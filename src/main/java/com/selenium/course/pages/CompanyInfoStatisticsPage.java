@@ -21,8 +21,6 @@ public class CompanyInfoStatisticsPage extends CompanyInfoPage{
     @FindBy (xpath = "//table//th//span[text()='Current']//ancestor::tr/th" )
     private List<WebElement> headerElementsRow;
 
-//    @FindBy (xpath = "//tr//td//span[text()='Price/Book']//ancestor::tr/td")
-//    private List<WebElement> priceBookRow;
 
     public String getPriceBookValueByColumnName(String columnName){
        By.ByXPath columnHeaderLocator = new By.ByXPath(String.format(COLUMN_HEADER_XPATH_BY_COLUMN_NAME,columnName));
