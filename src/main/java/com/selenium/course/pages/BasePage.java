@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
@@ -29,7 +30,7 @@ public class BasePage {
 
     protected <T> T explicitWaitUntilCondition(ExpectedCondition<T> expectedCondition){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        T result = explicitWait.until(expectedCondition);
+        T result = explicitWait.withTimeout(Duration.ofSeconds(20)).until(expectedCondition);
         driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
         return result;
 
