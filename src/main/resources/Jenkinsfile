@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-    }
         stage('Execute Automated Tests') {
             steps {
                 echo 'Testing..'
