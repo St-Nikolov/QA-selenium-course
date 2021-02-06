@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven'
+        jdk 'jdk-1.8.0_172'
+    }
+
+    stages {
+    }
+        stage('Execute Automated Tests') {
+            steps {
+                echo 'Testing..'
+                bat 'mvn -Dtestng.dtd.http=true clean test'
+            }
+        }
+    }
+}
