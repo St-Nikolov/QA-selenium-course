@@ -5,6 +5,7 @@
     <test name="Yahoo Finance tests">
         <classes>
             <class name="com.selenium.course.tests.CompanyInfoTests"/>
+            <class name="com.selenium.course.tests.SignUpTests"/>
 
         </classes>
     </test>
