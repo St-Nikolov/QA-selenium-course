@@ -3,8 +3,9 @@
 
 <suite name="Selenium Course Suite tests" parallel="classes" thread-count="3">
     <test name="Yahoo Finance tests">
-        <packages>
-            <package name="com.selenium.course.tests.*"/>
-        </packages>
+        <classes>
+            <class name="com.selenium.course.tests.SignUpTests"/>
+            <class name="com.selenium.course.tests.CompanyInfoTests"/>
+        </classes>
     </test>
 </suite>
