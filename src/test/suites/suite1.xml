@@ -4,7 +4,7 @@
 <suite name="Selenium Course Suite tests" parallel="classes" thread-count="3">
     <test name="Yahoo Finance tests">
         <packages>
-            <package name="com.selenium.course.tests.SignUpTests"/>
+            <package name="com.selenium.course.tests.*"/>
         </packages>
     </test>
 </suite>
