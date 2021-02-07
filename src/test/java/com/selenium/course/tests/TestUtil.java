@@ -21,7 +21,6 @@ public class TestUtil {
     protected HomePage homePage;
 
 
-//    @BeforeSuite
     public void readConfigProperties(){
         try (FileReader configFile = new FileReader("src/test/resources/config.properties")) {
             Properties config = new Properties();
@@ -35,8 +34,8 @@ public class TestUtil {
         }
     }
 
-//    @BeforeTest
     public void setupDriver(){
+        readConfigProperties();
         driver = DriverFactory.getDriver(browser);
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);

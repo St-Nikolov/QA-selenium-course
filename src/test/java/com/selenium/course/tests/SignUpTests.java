@@ -28,7 +28,6 @@ public class SignUpTests extends TestUtil {
 
     @BeforeTest
     public void setupDriver(){
-        readConfigProperties();
         super.setupDriver();
         reachCreateAccountPage();
     }

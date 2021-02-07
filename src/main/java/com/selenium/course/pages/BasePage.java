@@ -20,13 +20,13 @@ public class BasePage {
         explicitWait = new WebDriverWait(driver,20);
     }
 
-    protected <T> T executeOperationWithExplicitWait(int timeoutInSeconds, ExpectedCondition<T> expectedCondition,int implicitWait){
-        WebDriverWait wait = new WebDriverWait(driver,timeoutInSeconds);
-        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        T result = wait.until(expectedCondition);
-        driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
-        return result;
-    }
+//    protected <T> T executeOperationWithExplicitWait(int timeoutInSeconds, ExpectedCondition<T> expectedCondition,int implicitWait){
+//        WebDriverWait wait = new WebDriverWait(driver,timeoutInSeconds);
+//        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+//        T result = wait.until(expectedCondition);
+//        driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
+//        return result;
+//    }
 
     protected <T> T explicitWaitUntilCondition(ExpectedCondition<T> expectedCondition){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);

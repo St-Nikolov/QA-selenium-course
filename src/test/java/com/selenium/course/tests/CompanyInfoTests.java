@@ -15,7 +15,6 @@ public class CompanyInfoTests extends TestUtil {
 
     @BeforeTest
     public void setupDriver(){
-        readConfigProperties();
         super.setupDriver();
     }
 

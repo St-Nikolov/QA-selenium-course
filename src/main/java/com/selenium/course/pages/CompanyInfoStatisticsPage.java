@@ -15,8 +15,10 @@ public class CompanyInfoStatisticsPage extends CompanyInfoPage{
         super(driver,implicitWait);
     }
 
-    @FindBy (xpath="//td/span[text()=\"Price/Book\"]/ancestor::tr/td[2]")
-    WebElement priceBookValue;
+//    @FindBy (xpath="//td/span[text()=\"Price/Book\"]/ancestor::tr/td[2]")
+//    WebElement priceBookValue;
+
+    private final String PRICE_BOOK_LOCATION = "//td/span[text()=\"Price/Book\"]/ancestor::tr/td[2]";
 
 //    private static String PRICE_BOOK_XPATH_BY_COLUMN_INDEX = "//tr//td//span[text()='Price/Book']//ancestor::tr/td[%s]";
 //    private static String COLUMN_HEADER_XPATH_BY_COLUMN_NAME = "//table//th//span[text()='%s']//ancestor::th";
@@ -42,7 +44,10 @@ public class CompanyInfoStatisticsPage extends CompanyInfoPage{
 //    }
 
     public String getPriceBookValue(){
-        return priceBookValue.getText();
+        By priceBookLocator = new By.ByXPath(PRICE_BOOK_LOCATION);
+        explicitWaitUntilCondition(ExpectedConditions.presenceOfElementLocated(priceBookLocator));
+        explicitWaitUntilCondition( ExpectedConditions.not(ExpectedConditions.textToBe(priceBookLocator,"")));
+        return driver.findElement(priceBookLocator).getText();
     }
 
     }
