@@ -42,7 +42,6 @@ public class SignUpTests extends TestUtil {
         signUpPage.signUp(data[0],data[1],data[2],data[3],data[4],data[5]);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(signUpPage.getErrMessageMail(),data[8]);
-        System.out.println(signUpPage.getErrMessageMail());
         softAssert.assertEquals(signUpPage.getErrMessagePassword(),data[9]);
         softAssert.assertEquals(signUpPage.getErrMessagePhone(),data[10]);
         softAssert.assertEquals(signUpPage.getErrMessageBirthDate(),data[11]);
