@@ -9,7 +9,7 @@ pipeline {
         stage('Execute Automated Tests') {
             steps {
                 echo 'Testing..'
-                bat 'mvn -Dtestng.dtd.http=true clean test'
+                bat 'mvn clean test'
             }
         }
     }
